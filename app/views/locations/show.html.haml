@@ -1,0 +1,21 @@
+= static_map(@location.latitude, @location.longitude)
+%h1= @location.name
+= number_to_phone(@location.phone_number, :area_code => true)
+
+= @location.address
+= @location.city
+= @location.state
+= @location.zip_code
+- if @location.is_closed
+  Sorry! This location looks to be closed.
+
+-# if articles exist
+%h3
+  Articles about
+  = @location.name
+
+%ul.unstyled
+  -# each article do
+  %li= link_to 'This location is AWESOME', '#'
+  %li= link_to 'This location is AWESOME', '#'
+  %li= link_to 'This location is AWESOME', '#'

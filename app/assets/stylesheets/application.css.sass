@@ -1,0 +1,28 @@
+// /*
+//  * This is a manifest file that'll be compiled into application.css, which will include all the files
+//  * listed below.
+//  *
+//  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+//  * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+//  *
+//  * You're free to add application-wide styles to this file and they'll appear at the top of the
+//  * compiled file, but it's generally better to create a new file per style scope.
+//  *
+//  *= require_self
+//  */
+
+@import variables
+@import bootstrap
+body
+  padding-top: 0
+@import bootstrap-responsive
+
+// put this in global layout when you're done being lazy
+#main
+  padding-top: 40px // needs to match $navbarHeight + 10
+
+@include respond-to(landscape-tablet)
+  .navbar-fixed-top
+    margin-bottom: 0
+  #main
+    padding-top: 10px

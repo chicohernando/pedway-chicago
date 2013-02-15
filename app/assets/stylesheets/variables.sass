@@ -1,0 +1,24 @@
+// -------------------------- NAV OVERRIDES -------------------------- //
+$navbarHeight: 30px
+
+// -------------------------- FUN MIXINS -------------------------- //
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -ms-border-radius: $radius
+  -o-border-radius: $radius
+  border-radius: $radius
+
+=respond-to($media)
+  @if $media == large-desktop // Large desktop on up
+    @media (min-width: 1200px)
+      @content
+  @else if $media == landscape-tablet // Landscape tablet on down
+    @media (max-width: 979px)
+      @content
+  @else if $media == portrait-tablet // Portrait tablet on down
+    @media (max-width: 767px)
+      @content
+  @else if $media == landscape-phone-down // Landscape phone on down
+    @media (max-width: 480px)
+      @content

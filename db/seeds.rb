@@ -8,7 +8,7 @@
 
 require 'csv'
 
-csv_text = File.read('/Users/carissaniederer/projects/pedway-chicago/db/locations.csv')
+csv_text = File.read('db/locations.csv')
 csv = CSV.parse(csv_text, :headers => true)
 csv.each do |row|
   row = row.to_hash.with_indifferent_access

@@ -1,6 +1,6 @@
 class LocationsController < ApplicationController
   def index
-    @locations = Location.all.group_by{|l| l.name[0]}
+    @locations = Location.order_by_name
   end
 
   def show

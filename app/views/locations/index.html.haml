@@ -1,6 +1,5 @@
 %table
-  - @locations.keys.sort.each do |alpha|
-    - @locations[alpha].each do |location|
-      %tr
-        %td= link_to location.name, location
-        %td= location.address
+  - @locations.each do |location|
+    %tr
+      %td= link_to location.name, location
+      %td= location.address

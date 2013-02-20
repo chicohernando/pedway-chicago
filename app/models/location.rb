@@ -4,4 +4,7 @@ class Location < ActiveRecord::Base
 
   validates :name, length: { in: 1..70 }
 
+  def self.order_by_name
+    Location.order('name asc')
+  end
 end
